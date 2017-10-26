@@ -10,7 +10,8 @@ class EmpForm extends React.Component {
 			salary:'',
 			designation:'',
 			web:'',
-			mobile:''
+			mobile:'',
+			gender:''
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,7 +32,8 @@ class EmpForm extends React.Component {
 			salary:'',
 			designation:'',
 			web:'',
-			mobile:''
+			mobile:'',
+			gender:''
 		});
 		console.log('resetForm called...', this.state);
 		event.preventDefault();
@@ -84,8 +86,8 @@ class EmpForm extends React.Component {
 
 		    <div className="form-group">
 		    	<label className="control-label col-sm-2" htmlFor="gender">Gender</label>
-	    	      <label className="col-sm-2">Male  <input type="radio" name="gender"/></label>
-	    	      <label className="col-sm-2">Female  <input type="radio" name="gender"/></label>
+	    	      <label className="col-sm-2">Male  <input type="radio" name="gender"  value="Male"  onChange={this.handleChange}/></label>
+	    	      <label className="col-sm-2">Female  <input type="radio" name="gender"  value="Female"  onChange={this.handleChange}/></label>
 		    </div>
 
 		    <div className="form-group">
